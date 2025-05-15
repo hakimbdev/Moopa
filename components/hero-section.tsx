@@ -63,10 +63,10 @@ export function HeroSection() {
           </div>
 
           <div className="flex items-center justify-center lg:justify-end order-1 lg:order-2">
-            <div className="relative w-full max-w-[400px] h-[250px] xs:h-[300px] sm:h-[350px] md:h-[400px] animate-fade-in">
+            <div className="relative w-full max-w-[450px] h-[280px] xs:h-[320px] sm:h-[380px] md:h-[450px] animate-fade-in">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent rounded-full blur-3xl -z-10"></div>
               <Image
-                src="/images/hero-finance.svg"
+                src="https://res.cloudinary.com/dc5qncppu/image/upload/v1747327907/moopahero_auykrs.png"
                 alt="Financial wellbeing illustration"
                 fill
                 className="object-contain"
