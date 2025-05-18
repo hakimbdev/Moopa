@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowUpRight, CreditCard, DollarSign, Users, Wallet } from "lucide-react"
+import { ArrowUpRight, CreditCard, Users, Wallet } from "lucide-react"
 
 export default function AdminDashboard() {
   return (
@@ -43,10 +43,10 @@ export default function AdminDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Volume</CardTitle>
-            <DollarSign className="h-4 w-4 text-muted-foreground" />
+            <span className="text-muted-foreground font-bold text-sm">₦</span>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">$1.2M</div>
+            <div className="text-2xl font-bold">₦450M</div>
             <p className="text-xs text-muted-foreground">+15% from last month</p>
           </CardContent>
         </Card>
@@ -75,10 +75,10 @@ export default function AdminDashboard() {
                     <ArrowUpRight className="h-4 w-4" />
                   </div>
                   <div className="flex-1 space-y-1">
-                    <p className="text-sm font-medium leading-none">User withdrew $250</p>
+                    <p className="text-sm font-medium leading-none">User withdrew ₦25,000</p>
                     <p className="text-xs text-muted-foreground">2 minutes ago</p>
                   </div>
-                  <div className="font-medium">$250.00</div>
+                  <div className="font-medium">₦25,000</div>
                 </div>
               ))}
             </div>

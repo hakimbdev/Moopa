@@ -32,8 +32,8 @@ export function VoicePaymentDialog() {
     if (!isListening) {
       // Simulate voice recognition after a delay
       setTimeout(() => {
-        setTranscript("Pay $50 to John Smith")
-        setAmount("50")
+        setTranscript("Pay ₦5,000 to John Smith")
+        setAmount("5000")
         setRecipient("John Smith")
         setIsListening(false)
       }, 2000)
@@ -59,7 +59,7 @@ export function VoicePaymentDialog() {
       // Show success toast
       toast({
         title: "Payment Successful",
-        description: `$${amount} has been sent to ${recipient}`,
+        description: `₦${Number(amount).toLocaleString()} has been sent to ${recipient}`,
       })
     }, 1500)
   }
@@ -76,7 +76,7 @@ export function VoicePaymentDialog() {
         <DialogHeader>
           <DialogTitle>Voice Payment</DialogTitle>
           <DialogDescription>
-            Use your voice to make a payment. Say something like "Pay $50 to John Smith".
+            Use your voice to make a payment. Say something like "Pay ₦5,000 to John Smith".
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit}>
@@ -121,9 +121,9 @@ export function VoicePaymentDialog() {
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
                 className="col-span-3"
-                placeholder="0.00"
+                placeholder="0"
                 type="number"
-                step="0.01"
+                step="1"
                 min="0"
                 required
               />
